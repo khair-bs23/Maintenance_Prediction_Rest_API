@@ -40,6 +40,6 @@ In this work the classification algorithm predicted the Failure Type using LGBM 
 
 
 
-# API Viewpoints
+# API View
 ![image](https://github.com/khair-bs23/Maintenance_Prediction_Rest_API/assets/167753101/d387cdea-b85c-4444-a623-85c09c0934f9)
 
