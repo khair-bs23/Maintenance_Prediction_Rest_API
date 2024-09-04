@@ -38,9 +38,79 @@ In this work the classification algorithm predicted the Failure Type using LGBM 
 
 ![Drawing](https://github.com/khair-bs23/Maintenance_Prediction_Rest_API/assets/167753101/3f140e33-207c-48da-b18a-8268ad7942b3)
 
+# Maintenance Failure Prediction Application
+
+This application predicts potential maintenance failures based on machine parameters using a trained machine learning model. It includes a FastAPI backend and a Streamlit frontend for interaction.
+
+## Features
+- **FastAPI Backend**: Handles prediction requests.
+- **Streamlit Frontend**: Provides a user-friendly interface to input parameters and view predictions.
+- **Docker Support**: Easily run the entire application in containers using Docker Compose.
+
+## Setup Instructions
+
+### Prerequisites
+- [Python 3.8+](https://www.python.org/downloads/)
+- [Pipenv](https://pipenv.pypa.io/en/latest/) or [pip](https://pip.pypa.io/en/stable/)
+- [Docker](https://www.docker.com/get-started)
+- [Docker Compose](https://docs.docker.com/compose/)
+
+### Local Setup
+
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/yourusername/maintenance-failure-prediction.git
+    cd maintenance-failure-prediction
+    ```
+
+2. **Install dependencies:**
+   If using `pipenv`:
+    ```bash
+    pipenv install
+    pipenv shell
+    ```
+   If using `pip`:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. **Start FastAPI backend:**
+    ```bash
+    uvicorn main:app --reload
+    ```
+
+4. **Start Streamlit frontend:**
+    ```bash
+    streamlit run app.py
+    ```
+
+### Running with Docker
+
+1. **Build and run the containers:**
+    ```bash
+    docker-compose up --build
+    ```
+
+2. **Access the application:**
+   - FastAPI backend will be available at [http://localhost:8000](http://localhost:8000)
+   - Streamlit frontend will be available at [http://localhost:8501](http://localhost:8501)
+
+### Stopping the Application
+To stop the application when running with Docker, use:
+```bash
+docker-compose down
 
 
-
-# API View
-![image](https://github.com/khair-bs23/Maintenance_Prediction_Rest_API/assets/167753101/d387cdea-b85c-4444-a623-85c09c0934f9)
+## File Structure
+maintenance-failure-prediction/
+│
+├── main.py               # FastAPI backend
+├── app.py                # Streamlit frontend
+├── Dockerfile            # Dockerfile for the application
+├── docker-compose.yml    # Docker Compose configuration
+├── requirements.txt      # Python dependencies
+├── model/                # Directory containing the model and encoder files
+│   ├── maintenance-failure-model.pkl
+│   └── encoder.pkl
+└── README.md             # This readme file
 
