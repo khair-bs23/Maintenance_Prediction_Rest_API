@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel 
 import pickle 
 import numpy as np
+import os 
 
 class Input(BaseModel):
     air_temperature_k: float
@@ -13,8 +14,13 @@ class Input(BaseModel):
 
 def modelPipeline(data):
     # Maintenance prediction model and preprocessing loading
-    model = pickle.load(open('maintenance-failure-model.pkl', 'rb'))
-    encoder = pickle.load(open('encoder.pkl', 'rb'))
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    print(base_dir)
+    model_path = os.path.join(base_dir, '../models/maintenance-failure-model.pkl')
+    encoder_path = os.path.join(base_dir, '../models/encoder.pkl')
+
+    model = pickle.load(open(model_path, 'rb'))
+    encoder = pickle.load(open(encoder_path, 'rb'))
     
     input_list = [[
         data.air_temperature_k,
