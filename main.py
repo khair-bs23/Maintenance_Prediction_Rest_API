@@ -42,7 +42,6 @@ app =FastAPI()
 @app.post('/predict_failure')
 def predict_failure(data: Input):
     
-    
     prediction = modelPipeline(data)
 
     return {"prediction": prediction}
