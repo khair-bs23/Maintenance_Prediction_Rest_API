@@ -2,13 +2,14 @@
 
 The work is done using a synthetic dataset obtained from [Kaggle](https://www.kaggle.com/datasets/shivamb/machine-predictive-maintenance-classification). The dataset consists of 10 000 data points stored as rows with 14 features in columns
 
+# Interface 
+<img width="685" alt="Screenshot 2024-09-05 at 2 14 39 AM" src="https://github.com/user-attachments/assets/affc1df0-7c46-489c-bb7f-4cd20f53504b">
 
 # Technology Used
 * Python
 * Jupyter Notebook
 * Fast API
 * Docker
-
 
 In this work the classification algorithm predicted the Failure Type using LGBM classifier. The following results shows the performance of the model:
 
