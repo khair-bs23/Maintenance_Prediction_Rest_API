@@ -101,16 +101,4 @@ To stop the application when running with Docker, use:
 docker-compose down
 
 
-## File Structure
-maintenance-failure-prediction/
-│
-├── main.py               # FastAPI backend
-├── app.py                # Streamlit frontend
-├── Dockerfile            # Dockerfile for the application
-├── docker-compose.yml    # Docker Compose configuration
-├── requirements.txt      # Python dependencies
-├── model/                # Directory containing the model and encoder files
-│   ├── maintenance-failure-model.pkl
-│   └── encoder.pkl
-└── README.md             # This readme file
 
